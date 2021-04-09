@@ -37,7 +37,8 @@ UPDATE users SET created_at = concat(
 ALTER TABLE users MODIFY COLUMN created_at DATETIME, MODIFY COLUMN updated_at DATETIME;
 
 SELECT * FROM users;
-
-
+-- Исходя из уроков решил, что в MySQL будет работать стандартный SQL код.
+-- Из-за этого задание потребовало уйму времени и нервов, никакие примеры из SQL не работали.
+-- А в MySQL и SQL стринги складываются иначе.
 
 
