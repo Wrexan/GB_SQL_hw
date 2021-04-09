@@ -24,9 +24,7 @@ VALUES
 
 
 SELECT name,
-CASE
-	WHEN month(birthday_at) = 5 THEN 'may'
-	WHEN month(birthday_at) = 8 THEN 'august'
+CASE month(birthday_at)
+	WHEN 5 THEN 'may'
+	WHEN 8 THEN 'august'
 END AS birth_month FROM users WHERE month(birthday_at) IN (5, 8);
--- Не нашел, как сократить количество вызовов ф-ции month().
--- Декларация переменных не работает.
