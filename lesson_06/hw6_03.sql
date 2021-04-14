@@ -7,4 +7,4 @@
 
 SET @f := (SELECT count(like_type) FROM posts_likes WHERE like_type AND (SELECT gender FROM profiles WHERE profiles.user_id = posts_likes.user_id) = 'f');
 SET @m := (SELECT count(like_type) FROM posts_likes WHERE like_type AND (SELECT gender FROM profiles WHERE profiles.user_id = posts_likes.user_id) = 'm');
-SELECT IF(@f = @m,'fm', IF(@f > @m, 'f', 'm')) most_likers;
+SELECT IF(@f = @m,'females and males', IF(@f > @m, 'females', 'males')) most_likers;
