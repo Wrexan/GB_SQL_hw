@@ -18,5 +18,5 @@ BEGIN
 END//
 DELIMITER ;
 
-CALL wanna_flowers(1000000);
+CALL wanna_flowers(1000000);-- ОСТОРОЖНО! 100 инсертов заняло 13 секунд, 1000000 может занять около 36 часов.
 DROP PROCEDURE IF EXISTS wanna_flowers;
